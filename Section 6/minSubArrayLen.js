@@ -19,33 +19,10 @@ function minSubArrayLen(arr, target) {
   return dif === Infinity ? 0 : dif;
 }
 
-console.log('2: ', minSubArrayLen([2, 3, 1, 2, 4, 3], 7));
-console.log('2: ', minSubArrayLen([2, 1, 6, 5, 4], 9));
-console.log('1: ', minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52));
-console.log('3: ', minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39));
-console.log('5: ', minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 55));
-console.log('2: ', minSubArrayLen([4, 3, 3, 8, 1, 2, 3], 11));
-console.log('0: ', minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95));
-
-// function minSubArrayLen(arr, target) {
-//   if (arr.some((elem) => elem >= target)) {
-//     return 1;
-//   }
-//   let slideLength = 2;
-//   while (slideLength < arr.length) {
-//     let sum = arr.slice(0, slideLength).reduce((a, b) => a + b);
-//     let left = 0;
-//     let right = slideLength;
-//     while (right <= arr.length) {
-//       if (sum >= target) {
-//         return slideLength;
-//       }
-//       sum = sum - arr[left] + arr[right];
-//       left++;
-//       right++;
-//     }
-//     slideLength++;
-//   }
-
-//   return 0;
-// }
+console.log("2: ", minSubArrayLen([2, 3, 1, 2, 4, 3], 7));
+console.log("2: ", minSubArrayLen([2, 1, 6, 5, 4], 9));
+console.log("1: ", minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52));
+console.log("3: ", minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39));
+console.log("5: ", minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 55));
+console.log("2: ", minSubArrayLen([4, 3, 3, 8, 1, 2, 3], 11));
+console.log("0: ", minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95));
