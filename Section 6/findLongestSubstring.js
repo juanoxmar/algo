@@ -1,7 +1,23 @@
 function findLongestSubstring(string) {
-  if (string.length === 0) {
-    return 0;
+  let left = 0;
+  let subLength = 0;
+  const letterObj = {};
+
+  for (let i = 0; i < string.length; i++) {
+    const char = string[i];
+    if (char in letterObj) {
+      if (letterObj[char] < left) {
+        subLength = Math.max(subLength, i - left + 1);
+      } else {
+        left = letterObj[char] + 1;
+      }
+      letterObj[char] = i;
+    } else {
+      letterObj[char] = i;
+      subLength = Math.max(subLength, i - left + 1);
+    }
   }
+  return subLength;
 }
 
 console.log('0: ', findLongestSubstring(''));
