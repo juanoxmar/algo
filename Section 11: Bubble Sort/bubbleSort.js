@@ -19,6 +19,4 @@ function bubbleSort(list) {
   return list;
 }
 
-console.log(
-  bubbleSort([1000, 7, 2, 4, 9, 5, 8, 22, 67, 99, 23, 45, 67, 85, 1])
-);
+console.log(bubbleSort([1000, 7, 2, 4, 9, 5, 8, 22, 99, 23, 45, 67, 85, 1]));
