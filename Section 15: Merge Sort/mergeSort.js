@@ -10,10 +10,9 @@ function mergeSort(arr) {
     return arr;
   }
 
-  return merge(
-    mergeSort(arr.slice(0, Math.floor(arr.length / 2))),
-    mergeSort(arr.slice(Math.floor(arr.length / 2)))
-  );
+  const mid = Math.floor(arr.length / 2);
+
+  return merge(mergeSort(arr.slice(0, mid)), mergeSort(arr.slice(mid)));
 }
 
 console.log(mergeSort([1000, 7, 2, 4, 9, 5, 8, 22, 99, 23, 45, 67, 85, 1]));
