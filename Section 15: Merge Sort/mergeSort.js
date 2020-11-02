@@ -12,7 +12,7 @@ function mergeSort(arr) {
 
   return merge(
     mergeSort(arr.slice(0, Math.floor(arr.length / 2))),
-    mergeSort(arr.slice(Math.floor(arr.length / 2), arr.length))
+    mergeSort(arr.slice(Math.floor(arr.length / 2)))
   );
 }
 
