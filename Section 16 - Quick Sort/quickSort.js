@@ -14,18 +14,21 @@ function quickSort(arr) {
  * @returns {number}
  */
 
-function pivot(arr, start, end) {
+function pivot(arr, start = 0, end = arr.length - 1) {
   const swap = (arr, idx1, idx2) => {
-    [arr[idx1], arr[idx2]] = [arr[idx2][idx1]];
-  
-  let swapCount = 0;
-  for (let i = start + 1; i < end; i++) {
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+  };
+
+  let swapIdx = start;
+
+  for (let i = start + 1; i <= end; i++) {
     if (arr[start] > arr[i]) {
-      swapCount += 1;
-      swap(arr, swapCount, i);
+      swapIdx += 1;
+      swap(arr, swapIdx, i);
     }
   }
-  swap(arr, start, swapCount);
+  swap(arr, start, swapIdx);
+  console.log(arr);
 
-  return swapCount;
+  return swapIdx;
 }
