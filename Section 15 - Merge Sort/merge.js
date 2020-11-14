@@ -34,6 +34,4 @@ function merge(arr1, arr2) {
 }
 
 // [1, 2, 10, 14, 50, 99, 100]
-// console.log(merge([1, 10, 50], [2, 14, 99, 100]));
-
-export default merge;
+console.log(merge([1, 10, 50], [2, 14, 99, 100]));
