@@ -3,8 +3,16 @@
  * @returns {number[]}
  */
 
-function quickSort(arr) {
-  return arr;
+function quickSort(arr, start = 0, end = arr.length - 1) {
+  if (start < end) {
+    const index = pivot(arr, start, end);
+
+    // left side
+    quickSort(arr, start, index - 1);
+
+    // right side
+    quickSort(arr, index + 1, end);
+  }
 }
 
 /**
@@ -28,7 +36,10 @@ function pivot(arr, start = 0, end = arr.length - 1) {
     }
   }
   swap(arr, start, swapIdx);
-  console.log(arr);
 
   return swapIdx;
 }
+
+const arr = [7, 2, 4, 9, 5, 8, 1000, 22, 99, 23, 45, 67, 85, 1];
+quickSort(arr);
+console.log(arr);
